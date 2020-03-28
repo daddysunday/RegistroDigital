@@ -1,0 +1,7 @@
+{
+  "name": "RegistroDigital",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
