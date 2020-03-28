@@ -1,7 +1,8 @@
 {
   "name": "RegistroDigital",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
