@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/menu"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title text-center="text-center">Vender</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-button (click)="getAllTasks()">Trae los datos</ion-button>
+  <ion-button (click)="getTask()">Trae un dato</ion-button>
+
+  <ion-button
+  expand="block"
+  class="save"
+>Imprimir</ion-button>
+</ion-content>

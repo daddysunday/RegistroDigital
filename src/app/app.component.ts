@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskService} from './services/task.service';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -46,6 +47,7 @@ export class AppComponent implements OnInit {
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
   constructor(
+    private taskService: TaskService,
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar
@@ -65,5 +67,12 @@ export class AppComponent implements OnInit {
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
     }
+  }
+
+  getallTasks() {
+    this.taskService.getAllTasks()
+    .subscribe(todos => {
+      console.log(todos);
+    });
   }
 }
