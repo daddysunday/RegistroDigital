@@ -1,10 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { PrintService } from '../services/print.service';
 
 @Component({
-    selector:'app-home',
+    selector:'page-home',
     templateUrl:'home.page.html',
-    styleUrls:['home.page.scss'],
 })
 
 export class HomePage{
@@ -12,6 +11,7 @@ export class HomePage{
     selectedPrinter:any;
 
     constructor(private print:PrintService) {}
+
     //This will list all of your bluetooth devices
     listPrinter() { 
       this.print.searchBluetoothPrinter()
