@@ -1,14 +1,24 @@
-<ion-header>
-    <ion-toolbar color="primary">
-      <ion-buttons slot="start">
-        <ion-back-button defaultHref="/menu"></ion-back-button>
-      </ion-buttons>
-  
-      <ion-title text-center="text-center">Imprimir</ion-title>
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        Blank
+      </ion-title>
     </ion-toolbar>
 </ion-header>
-<ion-content>
-  <ion-list>
-      
-  </ion-list>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+        <ion-title size="large">
+            Blank
+        </ion-title>          
+    </ion-toolbar>
+  </ion-header>
+
+  <button (click)="ActivarBluetooth()">Buscar</button>   
+  <div *ngFor="let data of  bluetoothList">
+    <p>{{data.name}}</p>
+    <p>{{data.id}}</p>
+    <button (click)="connect(data.address)"></button>
+  </div>
 </ion-content>

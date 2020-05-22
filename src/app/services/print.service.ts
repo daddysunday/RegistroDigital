@@ -4,7 +4,11 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class PrintService {
 
-  constructor(public btSerial:BluetoothSerial) { 
+  constructor(private btSerial:BluetoothSerial) { 
+  }
+
+  enableBluetooth(){
+    return this.btSerial.enable();
   }
 
   searchBluetoothPrinter(){
