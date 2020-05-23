@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
     <ion-toolbar>
       <ion-title>
-        Blank
+        Lista de Dispositivos
       </ion-title>
     </ion-toolbar>
 </ion-header>
@@ -14,11 +14,12 @@
         </ion-title>          
     </ion-toolbar>
   </ion-header>
-
-  <button (click)="ActivarBluetooth()">Buscar</button>   
+  <br>
   <div *ngFor="let data of  bluetoothList">
     <p>{{data.name}}</p>
     <p>{{data.id}}</p>
-    <button (click)="connect(data.address)"></button>
+    <ion-button (click)="connect(data.address)">Conectarse</ion-button>
   </div>
+  <br>
+  <ion-button (click)="ActivarBluetooth()">Buscar</ion-button>   
 </ion-content>
