@@ -10,6 +10,8 @@ import { MenuController } from '@ionic/angular';
 })
 export class VenderPage implements OnInit {
 
+  taskData: any;
+
   constructor(
     private taskService: TaskService, private menuCtrl: MenuController
   ) { }
@@ -17,11 +19,12 @@ export class VenderPage implements OnInit {
   ngOnInit() {
   }
 
-  getList() {
-    this.taskService.getList()
-    .subscribe(tasks => {
-      console.log(tasks);
-    });
+  getAllProductos() {
+    //Get saved list of students
+    this.taskService.getList().subscribe(response => {
+      console.log(response);
+      this.taskData = response;
+    })
   }
 
   // getTask() {
