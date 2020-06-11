@@ -1,6 +1,6 @@
 <ion-app>
-  <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
+  <!-- <ion-split-pane contentId="main-content"> -->
+    <!-- <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>Inbox</ion-list-header>
@@ -23,7 +23,24 @@
           </ion-item>
         </ion-list>
       </ion-content>
+    </ion-menu> -->
+    <ion-menu side="start" menuId="first" contentId="main">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menu Principal</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <!-- <ion-item>Inicio</ion-item> -->
+          <ion-button routerLink="/home">Inicio</ion-button>
+          <ion-button routerLink="/add-empresa">Añadir Empresa</ion-button>
+          <ion-button routerLink="/add-articulo">Añadir Articulo</ion-button>
+          <ion-button routerLink="/vender">Vender</ion-button>
+        </ion-list>
+      </ion-content>
     </ion-menu>
-    <ion-router-outlet id="main-content"></ion-router-outlet>
-  </ion-split-pane>
+    
+        <ion-router-outlet id="main"></ion-router-outlet>
+  <!-- </ion-split-pane> -->
 </ion-app>

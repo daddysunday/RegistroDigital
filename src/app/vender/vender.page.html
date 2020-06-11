@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/menu"></ion-back-button>
@@ -6,14 +6,35 @@
 
     <ion-title text-center="text-center">Vender</ion-title>
   </ion-toolbar>
+</ion-header> -->
+<ion-header>
+
+    <ion-toolbar color="primary">
+
+      <ion-buttons slot="start">
+
+        <ion-button (click)="toggleMenu()">
+
+          <ion-icon name="list-outline"></ion-icon>          
+        </ion-button>
+
+      </ion-buttons>
+
+      <ion-title>
+        Vender
+      </ion-title>
+
+    </ion-toolbar>
+
 </ion-header>
 <ion-content>
 
-  <ion-button (click)="getAllTasks()">Trae los datos</ion-button>
+  <ion-button (click)="getList()">Trae los datos</ion-button>
   <ion-button (click)="getTask()">Trae un dato</ion-button>
+  <ion-button (click)="createTask()">Crear elemento</ion-button>
 
-  <ion-button
-  expand="block"
-  class="save"
->Imprimir</ion-button>
+
+  <!-- <ion-button expand="block" class="save">Imprimir</ion-button> -->
+<ion-button expand="block" class="save" routerLink="/imprimir">Imprimir</ion-button>
+
 </ion-content>

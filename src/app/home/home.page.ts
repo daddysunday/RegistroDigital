@@ -1,6 +1,6 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import {BluetoothSerial} from '@ionic-native/bluetooth-serial/ngx';
-import { AlertController } from '@ionic/angular';
+import { AlertController, MenuController } from '@ionic/angular';
 
 @Component({
     selector:'app-home',
@@ -11,8 +11,8 @@ export class HomePage{
     bluetoothList:any=[];
     selectedPrinter:any;
 
-    constructor(private btSerial:BluetoothSerial,private alertController:AlertController) {}
-
+    constructor(private btSerial:BluetoothSerial,private alertController:AlertController, private menuCtrl:MenuController) {}
+s
     ActivarBluetooth(){
         this.btSerial.isEnabled().then(response=>{
             //this.isEnabled("Encendido")
@@ -72,6 +72,10 @@ export class HomePage{
                 }
             }]
         })
+    }
+
+    toggleMenu(){
+        this.menuCtrl.toggle();
     }
 
     // //This will list all of your bluetooth devices

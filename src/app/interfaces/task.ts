@@ -7,9 +7,9 @@
 
 export interface Task {
 
-    ProductoId: number;
+    ProductoId: string;
     Nombre: string;
-    EmpaquedId: number;
+    EmpaquedId: string;
     Empaque: string;
     Precio: string;
 }

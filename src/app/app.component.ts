@@ -69,10 +69,10 @@ export class AppComponent implements OnInit {
     }
   }
 
-  getallTasks() {
-    this.taskService.getAllTasks()
-    .subscribe(todos => {
-      console.log(todos);
-    });
-  }
+  // getallTasks() {
+  //   this.taskService.getAllTasks()
+  //   .subscribe(todos => {
+  //     console.log(todos);
+  //   });
+  // }
 }

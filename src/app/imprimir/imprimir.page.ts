@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Printer, PrintOptions } from '@ionic-native/printer/ngx';
+
+
+
 @Component({
   selector: 'app-imprimir',
   templateUrl: './imprimir.page.html',
@@ -7,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImprimirPage implements OnInit {
 
-  constructor() { }
+  constructor(private printer: Printer) { }
 
   ngOnInit() {
   }

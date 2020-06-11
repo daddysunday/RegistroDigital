@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService} from '../services/task.service';
+import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -10,14 +11,14 @@ import { TaskService} from '../services/task.service';
 export class VenderPage implements OnInit {
 
   constructor(
-    private taskService: TaskService
+    private taskService: TaskService, private menuCtrl: MenuController
   ) { }
 
   ngOnInit() {
   }
 
-  getAllTasks() {
-    this.taskService.getAllTasks()
+  getList() {
+    this.taskService.getList()
     .subscribe(tasks => {
       console.log(tasks);
     });
@@ -29,5 +30,23 @@ export class VenderPage implements OnInit {
   //     console.log(task);
   //   });
   // }
+
+  toggleMenu(){
+    this.menuCtrl.toggle();
+}
+
+// createTask() {
+//   const task = {
+//     Empaque: 'change title',
+//     EmpaquedId: '1',
+//     Nombre: 'Helado',
+//     Precio: '10',
+//     ProductoId: '400'
+//   };
+//   this.taskService.createTask(task)
+//   .subscribe((newTask) => {
+//     console.log(newTask);
+//   });
+// }
 
 }

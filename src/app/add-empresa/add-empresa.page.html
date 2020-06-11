@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/menu"></ion-back-button>
@@ -6,6 +6,26 @@
 
     <ion-title text-center="text-center">Añadir Empresa</ion-title>
   </ion-toolbar>
+</ion-header> -->
+<ion-header>
+
+    <ion-toolbar color="primary">
+
+      <ion-buttons slot="start">
+
+        <ion-button (click)="toggleMenu()">
+
+          <ion-icon name="list-outline"></ion-icon>          
+        </ion-button>
+
+      </ion-buttons>
+
+      <ion-title>
+        Añadir Empresa
+      </ion-title>
+
+    </ion-toolbar>
+
 </ion-header>
 <ion-content>
   <br>
